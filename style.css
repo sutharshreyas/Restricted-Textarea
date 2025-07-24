@@ -1,0 +1,25 @@
+*{
+    margin: 5px;
+}
+.textarea{
+    height: 110px;
+    width: 500px;
+    border-radius: 30px;
+    resize: none;
+    border: 3px solid;
+    outline: none;
+    padding: 20px;
+    font-size: large;
+}
+h1{
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+.messagebox{
+    display: flex;
+}
+#charcount{
+    position: fixed;
+    left: 400px;
+    top: 180px;
+}

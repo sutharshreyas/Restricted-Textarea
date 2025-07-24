@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>write your message<h1>
+    </div>
+    <div class="messagebox" id="messagecontainer">
+        <textarea name="" id="message" placeholder="start typing....." class="textarea" maxlength="250"></textarea>
+
+        <div id="charcount">0/250 characters
+        </div>
+    </div>
+
+
+    <script>
+        const textarea = document.getElementById("message");
+        const charcount = document.getElementById("charcount");
+        textarea.addEventListener("input", () => {
+            const length = textarea.value.length;
+            const maxlength = textarea.getAttribute("maxlength");
+            charcount.textContent = `${length}/ ${maxlength} characters`;
+
+            if (length == maxlength) {document.getElementById("message").style.borderColor = "red"; 
+            document.getElementById("message").style.color= "red";
+            document.getElementById("charcount").style.color= "red";
+
+
+        }
+            else {
+                document.getElementById("message").style.borderColor = "black";
+                document.getElementById("message").style.color= "black";
+            document.getElementById("charcount").style.color= "black"; 
+            }
+        });
+    </script>
+</body>
+
+</html>
